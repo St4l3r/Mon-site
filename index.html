@@ -38,14 +38,42 @@
       line-height: 1.1;
       word-break: break-word;
     }
+
+    .bulle-lien {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #FF69B4; /* rose */
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, background-color 0.3s;
+      z-index: 1000;
+    }
+
+    .bulle-lien:hover {
+      background-color: #ff1493;
+      transform: scale(1.1);
+    }
+
   </style>
 </head>
 
 <body>
+
   <h1>
     Héloïse <br>
     & <br>
     Axel
   </h1>
+
+  <a href="page2.html" class="bulle-lien" title="Aller à la page 2">💬</a>
+
 </body>
 </html>
