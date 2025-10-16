@@ -68,9 +68,22 @@
       background-color: #ff1493;
       transform: scale(1.1);
     }
+
+    .fond {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(45deg, pink, purple);
+      z-index: -1; /* derrière tout */
+    }
+
   </style>
 </head>
 <body>
+
+  <div class="fond"></div>
 
   <div class="container">
     <h1>
