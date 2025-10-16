@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Notre rencontre </title>
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100vh; width: 100vw;
+      background: rgb(255, 243, 138);
+      overflow: hidden;
+      position: relative;
+      font-size: 2rem;
+    }
+
+    .fleur {
+      position: absolute;
+      user-select: none;
+      pointer-events: none;
+      animation: flutter 6s ease-in-out infinite;
+    }
+
+    @keyframes flutter {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(15deg); }
+    }
+
+    .bulle {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      right: 5%;
+      bottom: 5%;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      overflow-y: auto;
+      color: #333;
+      font-size: clamp(1rem, 2.5vw, 3rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: center;
+      line-height: 1.2;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  const nbFleurs = 45;
+  const images = [
+    'image1025/I1.png',
+    'image1025/I2.png',
+    'image1025/I3.png'
+  ];
+
+  for (let i = 0; i < nbFleurs; i++) {
+    const fleur = document.createElement('img');
+    fleur.className = 'fleur';
+    fleur.src = images[Math.floor(Math.random() * images.length)];
+    fleur.style.top = Math.random() * 100 + 'vh';
+    fleur.style.left = Math.random() * 100 + 'vw';
+    fleur.style.animationDelay = (Math.random() * 6) + 's';
+    fleur.style.width = (24 + Math.random() * 36) + 'px'; // taille aléatoire
+    document.body.appendChild(fleur);
+  }
+</script>
+
+<div class="bulle">
+  <p>
+    <!-- Ton texte ici -->
+  </p>
+</div>
+
+</body>
+</html>
