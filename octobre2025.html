@@ -3,14 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Octobre 2025 </title>
+  <title> Notre rencontre </title>
   <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
     html, body {
       height: 100vh;
@@ -19,74 +13,70 @@
       overflow: hidden;
       background: pink;
       font-family: Arial, sans-serif;
+      position: relative;
     }
 
-    body {
-      animation: arcEnCiel 10s linear infinite alternate;
-      background-size: 400% 400%;
-      background-image: linear-gradient(
-        45deg,
-        #ffd1dc,
-        #ffe0b3,
-        #ffffcc,
-        #ccffcc,
-        #ccf2ff,
-        #e0ccff,
-        #ffd1dc
-      );
+    .Papillons {
+      position: absolute;
+      user-select: none;
+      pointer-events: none;
+      animation: flutter 6s ease-in-out infinite;
     }
 
-    @keyframes arcEnCiel {
-      0% {
-        background-position: top left;
-      }
-      50% {
-        background-position: bottom right;
-      }
-      100% {
-        background-position: top right;
-      }
+    @keyframes flutter {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(15deg); }
     }
 
     .bulle {
-        position: fixed;
-        left: 5%;
-        right: 5%;
-        background-color: #E673DF;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-        line-height: 60px;
-        border-radius: 20%;
-        text-decoration: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-        font-family: 'Impact', cursive;
+      position: fixed;
+      left: 5%;
+      right: 5%;
+      background-color: #E673DF;
+      color: black;
+      font-size: 30px;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 20%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      font-family: 'Impact', cursive;
     }
 
-    .b1 {
-        top: 5%;
-    }
+    .b1 { top: 5%; }
+    .b2 { top: 15%; }
+    .b3 { top: 25%; }
+    .b4 { top: 35%; }
+    .b5 { top: 45%; }
 
-    .b2 {
-        top: 15%;
-    }
-
-    .b3 {
-        top: 25%;
-    }
-
-    .b4 {
-        top: 35%;
-    }
-
-    .b5 {
-        top: 45%;
+    @keyframes flutter {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(15deg); }
     }
 
   </style>
 </head>
-<body>
+  <body>
+
+    <script>
+      const nbPapillons = 15;
+      const images = [
+        'I4.png',
+        'I5.png'
+        ];
+
+      for (let i = 0; i < nbPapillons; i++) {
+        const Papillons = document.createElement('img');
+        Papillons.className = 'Papillons';
+        Papillons.src = images[Math.floor(Math.random() * images.length)];
+        Papillons.style.top = Math.random() * 100 + 'vh';
+        Papillons.style.left = Math.random() * 100 + 'vw';
+        Papillons.style.animationDelay = (Math.random() * 6) + 's';
+        Papillons.style.width = (24 + Math.random() * 36) + 'px';
+        document.body.appendChild(Papillons);
+      }
+    </script>
 
     <a href="samedi111025.html" class="bulle b1"> Samedi 11 </a>
     <a href="dimanche121025.html" class="bulle b2"> Dimanche 12 </a>
@@ -94,5 +84,5 @@
     <a href="mardi141025.html" class="bulle b4"> Mardi 14 </a>
     <a href="mercredi151025.html" class="bulle b5"> Mercredi 15 </a>
 
-</body>
+  </body>
 </html>
