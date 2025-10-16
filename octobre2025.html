@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Octobre 2025 </title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: pink;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      animation: arcEnCiel 10s linear infinite alternate;
+      background-size: 400% 400%;
+      background-image: linear-gradient(
+        45deg,
+        #ffd1dc,
+        #ffe0b3,
+        #ffffcc,
+        #ccffcc,
+        #ccf2ff,
+        #e0ccff,
+        #ffd1dc
+      );
+    }
+
+    @keyframes arcEnCiel {
+      0% {
+        background-position: top left;
+      }
+      50% {
+        background-position: bottom right;
+      }
+      100% {
+        background-position: top right;
+      }
+    }
+
+    .bulle {
+        position: fixed;
+        left: 5%;
+        right: 5%;
+        background-color: #E673DF;
+        color: black;
+        font-size: 30px;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 50%;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        font-family: 'Impact', cursive;
+    }
+
+    .b1 {
+        top: 5%;
+    }
+
+    .b2 {
+        top: 15%;
+    }
+
+    .b3 {
+        top: 25%;
+    }
+
+    .b4 {
+        top: 35%;
+    }
+
+    .b5 {
+        top: 45%;
+    }
+
+  </style>
+</head>
+<body>
+
+    <a href="octobre2025/samedi11" class="bulle b1"> Samedi 11 </a>
+    <a href="octobre2025/dimanche12.html" class="bulle b2"> Dimanche 12 </a>
+    <a href="octobre2025/lundi13.html" class="bulle b3"> Lundi 13 </a>
+    <a href="octobre2025/mardi14.html" class="bulle b4"> Mardi 14 </a>
+    <a href="octobre2025/mercredi15.html" class="bulle b5"> Mercredi 15 </a>
+
+</body>
+</html>
