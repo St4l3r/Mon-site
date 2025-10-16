@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon site web</title>
+  
+  <style>
+    /* Style global */
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden; /* Empêche le scroll vertical */
+      -webkit-text-size-adjust: 100%; /* Pour Safari iOS */
+    }
+
+    body {
+      background: linear-gradient(45deg, pink, purple);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Brush Script MT', cursive;
+    }
+
+    h1 {
+      color: black;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #BBF1FC,
+        0 0 30px #BBF1FC,
+        0 0 40px #BBF1FC;
+      font-size: 25vw;
+      margin: 0;
+      line-height: 1.1;
+      word-break: break-word;
+    }
+
+    .bulle-lien {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #FF69B4; /* rose */
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, background-color 0.3s;
+      z-index: 1000;
+    }
+
+    .bulle-lien:hover {
+      background-color: #ff1493;
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>
+    Héloïse <br>
+    & <br>
+    Axel
+  </h1>
+
+  <a href="menu.html" class="bulle-lien" title="Aller à la page 2">💬</a>
+
+</body>
+</html>
