@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon site web</title>
+  
   <style>
-    /* Reset global */
+    /* Style global */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html, body {
+     html, body {
+      height: 100vh;
       background: linear-gradient(45deg, pink, purple);
-      height: 100dvh; /* Utilisation de 100dvh ici */
-      width: 100vw;
       overflow: hidden;
-      -webkit-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%; /* Pour Safari iOS */
     }
 
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Brush Script MT', cursive;
-    }
-
-    .container {
       text-align: center;
-      width: 100%;
-      padding: env(safe-area-inset-top) 20px env(safe-area-inset-bottom);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Brush Script MT', cursive;
     }
 
     h1 {
@@ -41,7 +36,8 @@
         0 0 20px #BBF1FC,
         0 0 30px #BBF1FC,
         0 0 40px #BBF1FC;
-      font-size: 18vw;
+      font-size: 25vw;
+      margin: 0;
       line-height: 1.1;
       word-break: break-word;
     }
@@ -52,7 +48,7 @@
       right: 20px;
       width: 60px;
       height: 60px;
-      background-color: #FF69B4;
+      background-color: #FF69B4; /* rose */
       color: white;
       font-size: 30px;
       text-align: center;
@@ -69,29 +65,16 @@
       transform: scale(1.1);
     }
 
-    .fond {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100dvh; /* ici aussi */
-      background: linear-gradient(45deg, pink, purple);
-      z-index: -1;
-    }
-
   </style>
 </head>
+
 <body>
 
-  <div class="fond"></div>
-
-  <div class="container">
-    <h1>
-      Héloïse <br>
-      & <br>
-      Axel
-    </h1>
-  </div>
+  <h1>
+    Héloïse <br>
+    & <br>
+    Axel
+  </h1>
 
   <a href="menu.html" class="bulle-lien" title="Aller à la page 2">💬</a>
 
