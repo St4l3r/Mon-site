@@ -10,7 +10,7 @@
       background: linear-gradient(to bottom, #d4f1d4, #1a5e1a);
       overflow: hidden;
       position: relative;
-      font-size: 2rem; /* taille des papillons */
+      font-size: 2rem;
     }
     .papillon {
       position: absolute;
@@ -23,13 +23,37 @@
       0%, 100% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-10px) rotate(15deg); }
     }
+
+    .bulle {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        right: 5%;
+        height: 90%;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 15px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        overflow-y: auto;       /* Scroll vertical uniquement */
+        color: #333;
+        font-size: clamp(1rem, 2.5vw, 3rem); /* Taille de texte adaptative */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alignement en haut */
+        align-items: flex-start;     /* Alignement en haut */
+        text-align: center;
+        line-height: 1.2;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
   </style>
 </head>
 <body>
 
 <script>
-  const nbPapillons = 30; // nombre d'emojis
-  const colors = ['🦋', '🩷', '🦋', '🩷', '🦋']; // tu peux changer par d'autres emojis si tu veux
+  const nbPapillons = 50;
+  const colors = ['🦋', '🩷', '🦋', '🩷', '🦋'];
 
   for(let i=0; i < nbPapillons; i++) {
     const papillon = document.createElement('div');
@@ -38,10 +62,30 @@
     papillon.style.top = Math.random() * 100 + 'vh';
     papillon.style.left = Math.random() * 100 + 'vw';
     papillon.style.animationDelay = (Math.random() * 6) + 's';
-    papillon.style.fontSize = (12 + Math.random() * 24) + 'px'; // taille aléatoire entre 12px et 36px
+    papillon.style.fontSize = (12 + Math.random() * 24) + 'px';
     document.body.appendChild(papillon);
   }
 </script>
+
+<div class="bulle">
+  <p>
+
+    Il était une fois, deux âmes fatiguées de vivre, qui s’étaient retrouvées dans un lieu où l’on venait, non pas pour fuir la vie,
+    mais peut-être pour apprendre à la regarder autrement. Ce n’était pas un endroit sombre comme on l’imagine, mais un refuge étrange,
+    presque paisible, où le silence apaisait plus qu’il n’effrayait.
+    Lui, portant le poids de ses pensées trop lourdes, et elle, cherchant simplement à respirer encore un peu, se croisèrent là,
+    au détour d’un jour ordinaire. Au début, ce ne fut pas l’amour, mais une reconnaissance 
+    — comme si chacun voyait dans l’autre un reflet de sa propre douleur, une lumière fragile dans le même brouillard.
+    Jour après jour, soirée après soirée, leurs rires éclataient comme des étoiles dans la nuit,
+    et leurs regards s’entrelacaient, devenant de plus en plus profonds, plus sincères.
+    Et alors, sans qu’il ne puisse vraiment l’expliquer, il tomba amoureux.
+    Mais comme dans tous les contes, le destin n’était pas tendre : elle fut transférée ailleurs, emportée loin de lui.
+    Son absence creusa un vide douloureux, une nuit sans fin. Pourtant, ni le chagrin ni la distance ne purent briser ce lien naissant.
+    Il décida de la retrouver, porté par une force invisible, une promesse douce et fragile.<br><br>
+    Ainsi, commence peut-être une belle histoire d’amour…
+
+  </p>
+</div>
 
 </body>
 </html>

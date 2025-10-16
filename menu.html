@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menu</title>
+  <title> Menu </title>
   <style>
-    /* Reset */
+
     * {
       margin: 0;
       padding: 0;
@@ -16,17 +16,16 @@
       height: 100vh;
       margin: 0;
       padding: 0;
-      overflow: hidden; /* empêche scroll pendant animation */
-      background: pink; /* fond rose */
+      overflow: hidden;
+      background: pink;
       font-family: Arial, sans-serif;
     }
 
-    /* Rideaux */
     .curtain {
       position: fixed;
       top: 0;
-      width: 50vw;  /* 50% largeur viewport */
-      height: 100dvh; /* pleine hauteur */
+      width: 50vw;
+      height: 100dvh;
       background: linear-gradient(
         0deg,
         red,
@@ -53,16 +52,14 @@
       transform-origin: right center;
     }
 
-    /* Rideaux ouverts vers l’extérieur */
     .open-left {
-      transform: translateX(-100vw); /* sort complètement à gauche */
+      transform: translateX(-100vw);
     }
 
     .open-right {
-      transform: translateX(100vw);  /* sort complètement à droite */
+      transform: translateX(100vw);
     }
 
-    /* Contenu */
     .content {
       position: relative;
       z-index: 1;
@@ -71,7 +68,7 @@
       padding-top: 40vh;
       font-size: 2rem;
       opacity: 0;
-      transition: opacity 0.5s ease 0.5s; /* apparait après animation rideaux */
+      transition: opacity 0.5s ease 0.5s;
     }
 
     .content.visible {
@@ -83,7 +80,7 @@
       top: 5%;
       left: 5%;
       right: 5%;
-      background-color: #BBF1FC; /* rose */
+      background-color: #BBF1FC;
       color: black;
       font-size: 30px;
       text-align: center;
@@ -100,7 +97,7 @@
       top: 15%;
       left: 5%;
       right: 5%;
-      background-color: #BBF1FC; /* rose */
+      background-color: #BBF1FC;
       color: black;
       font-size: 30px;
       text-align: center;
@@ -123,31 +120,25 @@
       const rightCurtain = document.querySelector('.curtain.right');
       const content = document.querySelector('.content');
 
-      // Laisser un petit délai pour que la page s’affiche avant animation
       setTimeout(() => {
         leftCurtain.classList.add('open-left');
         rightCurtain.classList.add('open-right');
       }, 100);
 
-      // Afficher le contenu après l’animation des rideaux (2s)
       setTimeout(() => {
         content.classList.add('visible');
-        document.body.style.overflow = 'auto'; // autoriser scroll si besoin
+        document.body.style.overflow = 'auto';
       }, 2100);
     });
   </script>
 
-
-
-  <!-- Rideaux rouges -->
   <div class="curtain left"></div>
   <div class="curtain right"></div>
 
-  <!-- Contenu -->
   <div class="content">
   
     <a href="rencontre.html" class="bulle1"> Rencontre </a>
-    <a href="octobre.html" class="bulle2"> Octobre </a>
+    <a href="octobre2025.html" class="bulle2"> Octobre </a>
 
   </div>
 
