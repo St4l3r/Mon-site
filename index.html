@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mon site web</title>
-  
+
   <style>
-    /* Style global */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-     html, body {
+    html, body {
       height: 100vh;
-      margin: 0;
-      padding: 0;
       background: linear-gradient(45deg, pink, purple);
       overflow: hidden;
-      -webkit-text-size-adjust: 100%; /* Pour Safari iOS */
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
-      text-align: center;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       font-family: 'Brush Script MT', cursive;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 100vw;
+      padding: 0 10px;
     }
 
     h1 {
@@ -38,8 +41,7 @@
         0 0 20px #BBF1FC,
         0 0 30px #BBF1FC,
         0 0 40px #BBF1FC;
-      font-size: 25vw;
-      margin: 0;
+      font-size: 18vw; /* réduit pour éviter débordement */
       line-height: 1.1;
       word-break: break-word;
     }
@@ -50,7 +52,7 @@
       right: 20px;
       width: 60px;
       height: 60px;
-      background-color: #FF69B4; /* rose */
+      background-color: #FF69B4;
       color: white;
       font-size: 30px;
       text-align: center;
@@ -66,17 +68,18 @@
       background-color: #ff1493;
       transform: scale(1.1);
     }
-
   </style>
 </head>
 
 <body>
 
-  <h1>
-    Héloïse <br>
-    & <br>
-    Axel
-  </h1>
+  <div class="container">
+    <h1>
+      Héloïse <br>
+      & <br>
+      Axel
+    </h1>
+  </div>
 
   <a href="menu.html" class="bulle-lien" title="Aller à la page 2">💬</a>
 
